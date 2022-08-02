@@ -73,12 +73,12 @@ public class King
      */
     @Override
     public ImageIcon createImageByPieceType(){
-        if ( getColorOfPiece() == ChessGamePiece.WHITE ){
+        if ( getColorOfPiece() == Color.WHITE ){
             return new ImageIcon(
                 getClass().getResource("chessImages/WhiteKing.gif")
             );            
         }
-        else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
+        else if ( getColorOfPiece() == Color.BLACK ){
             return new ImageIcon(
                 getClass().getResource("chessImages/BlackKing.gif" )
             );            
