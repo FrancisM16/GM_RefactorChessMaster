@@ -113,7 +113,7 @@ public class ChessGameEngine{
         }
         if ( currentPlayer == 2 ) // black player
         {
-            if ( currentPiece.getColorOfPiece() == ChessGamePiece.BLACK ){
+            if ( currentPiece.getColorOfPiece() == ColorEnum.BLACK ){
                 return true;
             }
             return false;
@@ -121,7 +121,7 @@ public class ChessGameEngine{
         else
         // white player
         {
-            if ( currentPiece.getColorOfPiece() == ChessGamePiece.WHITE ){
+            if ( currentPiece.getColorOfPiece() == ColorEnum.WHITE ){
                 return true;
             }
             return false;

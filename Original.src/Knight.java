@@ -23,7 +23,7 @@ public class Knight
      * @param color
      *            either GamePiece.WHITE, BLACK, or UNASSIGNED
      */
-    public Knight( ChessGameBoard board, int row, int col, int color ){
+    public Knight( ChessGameBoard board, int row, int col, ColorEnum color ){
         super( board, row, col, color );
     }
     /**
@@ -97,12 +97,12 @@ public class Knight
      */
     @Override
     public ImageIcon createImageByPieceType(){
-        if ( getColorOfPiece() == ChessGamePiece.WHITE ){
+        if ( getColorOfPiece() == ColorEnum.WHITE ){
             return new ImageIcon(
                 getClass().getResource("chessImages/WhiteKnight.gif")
             );            
         }
-        else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
+        else if ( getColorOfPiece() == ColorEnum.BLACK ){
             return new ImageIcon(
                 getClass().getResource("chessImages/BlackKnight.gif")
             );            

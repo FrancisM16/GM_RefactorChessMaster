@@ -22,7 +22,7 @@ public class Bishop extends ChessGamePiece{
      * @param color
      *            either GamePiece.WHITE, BLACK, or UNASSIGNED
      */
-    public Bishop( ChessGameBoard board, int row, int col, int color ){
+    public Bishop( ChessGameBoard board, int row, int col, ColorEnum color ){
         super( board, row, col, color );
     }
     /**
@@ -53,12 +53,12 @@ public class Bishop extends ChessGamePiece{
      */
     @Override
     public ImageIcon createImageByPieceType(){
-        if ( getColorOfPiece() == ChessGamePiece.WHITE ){
+        if ( getColorOfPiece() == ColorEnum.WHITE ){
             return new ImageIcon(
                 getClass().getResource("chessImages/WhiteBishop.gif")
             );            
         }
-        else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
+        else if ( getColorOfPiece() == ColorEnum.BLACK ){
             return new ImageIcon(
                 getClass().getResource("chessImages/BlackBishop.gif")
             );

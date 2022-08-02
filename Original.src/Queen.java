@@ -25,7 +25,7 @@ public class Queen
      * @param color
      *            either GamePiece.WHITE, BLACK, or UNASSIGNED
      */
-    public Queen( ChessGameBoard board, int row, int col, int color ){
+    public Queen( ChessGameBoard board, int row, int col, ColorEnum color ){
         super( board, row, col, color );
     }
     /**
@@ -61,12 +61,12 @@ public class Queen
      */
     @Override
     public ImageIcon createImageByPieceType(){
-        if ( getColorOfPiece() == ChessGamePiece.WHITE ){
+        if ( getColorOfPiece() == ColorEnum.WHITE ){
             return new ImageIcon(
                 getClass().getResource("chessImages/WhiteQueen.gif")
             );            
         }
-        else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
+        else if ( getColorOfPiece() == ColorEnum.BLACK ){
             return new ImageIcon(
                 getClass().getResource("chessImages/BlackQueen.gif")
             );            
