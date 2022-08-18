@@ -1,5 +1,10 @@
+package UI.pieces;
+
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
+
+import UI.ChessGamePiece;
+import UI.board.ChessGameBoard;
 
 // -------------------------------------------------------------------------
 /**
