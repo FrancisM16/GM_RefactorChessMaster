@@ -1,15 +1,15 @@
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\ChessGameEngine.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\ChessMain.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\Rook.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\ChessGamePiece.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\ChessMenuBar.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\King.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\Knight.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\ChessGameLog.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\Queen.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\ChessGraveyard.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\BoardSquare.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\ChessGameBoard.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\Pawn.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\Bishop.java
-G:\patrones\veranito-chesss\veranito-chess\src\main\java\ChessPanel.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\UI\pieces\Queen.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\logic\ChessGameEngine.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\UI\ChessGamePiece.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\logic\ChessGraveyard.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\UI\pieces\Pawn.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\logic\ChessGameLog.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\UI\pieces\King.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\UI\pieces\Rook.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\UI\pieces\Bishop.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\UI\ChessMain.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\UI\pieces\Knight.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\UI\board\ChessGameBoard.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\logic\ChessMenuBar.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\UI\ChessPanel.java
+D:\Universidad\Gestion mantenimiento\GM_RefactorChessMaster\src\main\java\UI\board\BoardSquare.java
