@@ -154,7 +154,7 @@ public abstract class ChessGamePiece {
                         break;
                     }
                 } else {
-                    break;
+                    return moves;
                 }
             }
         }
@@ -218,7 +218,7 @@ public abstract class ChessGamePiece {
                         break;
                     }
                 } else {
-                    break;
+                    return moves;
                 }
             }
         }
@@ -250,7 +250,7 @@ public abstract class ChessGamePiece {
                         break;
                     }
                 } else {
-                    break;
+                    return moves;
                 }
             }
         }
@@ -282,10 +282,9 @@ public abstract class ChessGamePiece {
                     count++;
                 } else if (isEnemy(board, pieceRow - i, pieceColumn - i)) {
                     moves.add((pieceRow - i) + "," + (pieceColumn - i));
-                    count++;
                     break;
                 } else {
-                    break;
+                    return moves;
                 }
             }
         }
@@ -317,10 +316,9 @@ public abstract class ChessGamePiece {
                     count++;
                 } else if (isEnemy(board, pieceRow - i, pieceColumn + i)) {
                     moves.add((pieceRow - i) + "," + (pieceColumn + i));
-                    count++;
                     break;
                 } else {
-                    break;
+                    return moves;
                 }
             }
         }
@@ -352,10 +350,9 @@ public abstract class ChessGamePiece {
                     count++;
                 } else if (isEnemy(board, pieceRow + i, pieceColumn - i)) {
                     moves.add((pieceRow + i) + "," + (pieceColumn - i));
-                    count++;
                     break;
                 } else {
-                    break;
+                    return moves;
                 }
             }
         }
@@ -387,10 +384,9 @@ public abstract class ChessGamePiece {
                     count++;
                 } else if (isEnemy(board, pieceRow + i, pieceColumn + i)) {
                     moves.add((pieceRow + i) + "," + (pieceColumn + i));
-                    count++;
                     break;
                 } else {
-                    break;
+                    return moves;
                 }
             }
         }
@@ -436,11 +432,7 @@ public abstract class ChessGamePiece {
      * @return boolean true if the location is valid, false if not
      */
     public boolean isOnScreen(int row, int col) {
-        if (row >= 0 && row <= 7 && col >= 0 && col <= 7) {
-            return true;
-        } else {
-            return false;
-        }
+        return (row >= 0 && row <= 7 && col >= 0 && col <= 7);
     }
 
     // ----------------------------------------------------------
@@ -672,17 +664,9 @@ public abstract class ChessGamePiece {
             return false;
         }
         if (this.getColorOfPiece() == ChessGamePiece.WHITE) {
-            if (enemyPiece.getColorOfPiece() == ChessGamePiece.BLACK) {
-                return true;
-            } else {
-                return false;
-            }
+            return enemyPiece.getColorOfPiece() == ChessGamePiece.BLACK;
         } else {
-            if (enemyPiece.getColorOfPiece() == ChessGamePiece.WHITE) {
-                return true;
-            } else {
-                return false;
-            }
+            return enemyPiece.getColorOfPiece() == ChessGamePiece.WHITE;
         }
     }
 
