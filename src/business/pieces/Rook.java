@@ -1,6 +1,12 @@
-import javax.swing.ImageIcon;
-import java.util.ArrayList;
-// -------------------------------------------------------------------------
+package business.pieces;
+
+import business.service.moves.pieces.CreateMoveService;
+import business.service.moves.pieces.PieceMove;
+import gui.board.ChessGameBoard;
+import util.ColorOfPiece;
+
+import javax.swing.*;
+
 /**
  * Represents a Rook game piece.
  *
@@ -9,43 +15,28 @@ import java.util.ArrayList;
  * @author Danielle Bushrow (dbushrow)
  * @version 2010.11.17
  */
-public class Rook
-    extends ChessGamePiece{
-    // private ArrayList<String> possibleMoves;
-    // ----------------------------------------------------------
+public class Rook extends ChessGamePiece {
+
     /**
      * Create a new Rook object.
      *
-     * @param board
-     *            the board to create the rook on
-     * @param row
-     *            the row to create the rook on
-     * @param col
-     *            the column to create the rook on
-     * @param color
-     *            either GamePiece.WHITE, BLACK, or UNASSIGNED
+     * @param board the board to create the rook on
+     * @param row   the row to create the rook on
+     * @param col   the column to create the rook on
+     * @param color either GamePiece.WHITE, BLACK, or UNASSIGNED
      */
-    public Rook( ChessGameBoard board, int row, int col, int color ){
-        super( board, row, col, color );
+    public Rook(ChessGameBoard board, int row, int col, int color) {
+        super(board, row, col, color);
+        pieceMove = new PieceMove(CreateMoveService.rookMove(row,col,new ColorOfPiece(color)));
+        possibleMoves = pieceMove.calculateCardinalMoves(board,8);
     }
-    /**
-     * Calculates the possible moves for this Rook.
-     * @param board the board to check on
-     * @return ArrayList<String> the list of moves
-     */
+
     @Override
-    protected ArrayList<String> calculatePossibleMoves( ChessGameBoard board ){
-        ArrayList<String> northMoves = calculateNorthMoves( board, 8 );
-        ArrayList<String> southMoves = calculateSouthMoves( board, 8 );
-        ArrayList<String> westMoves = calculateWestMoves( board, 8 );
-        ArrayList<String> eastMoves = calculateEastMoves( board, 8 );
-        ArrayList<String> allMoves = new ArrayList<String>();
-        allMoves.addAll( northMoves );
-        allMoves.addAll( southMoves );
-        allMoves.addAll( westMoves );
-        allMoves.addAll( eastMoves );
-        return allMoves;
+    public void calculatePossibleMoves(ChessGameBoard board) {
+        pieceMove = new PieceMove(CreateMoveService.rookMove(pieceRow,pieceColumn,colorOfPiece));
+        possibleMoves = pieceMove.calculateCardinalMoves(board,8);
     }
+
     /**
      * Creates an icon for this piece depending on the piece's color.
      *
@@ -53,21 +44,8 @@ public class Rook
      */
     @Override
     public ImageIcon createImageByPieceType(){
-        if ( getColorOfPiece() == ChessGamePiece.WHITE ){
-            return new ImageIcon(
-                getClass().getResource("chessImages/WhiteRook.gif")
-            );            
-        }
-        else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
-            return new ImageIcon(
-                getClass().getResource("chessImages/BlackRook.gif")
-            );            
-        }
-        else
-        {
-            return new ImageIcon(
-                getClass().getResource("chessImages/default-Unassigned.gif")
-            );        
-        }
+        return new ImageIcon(
+                getClass().getResource(resourceOfPiece.resourceByType("Rook"))
+        );
     }
 }
