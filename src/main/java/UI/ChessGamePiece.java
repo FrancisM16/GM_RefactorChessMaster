@@ -186,7 +186,7 @@ public abstract class ChessGamePiece {
                         break;
                     }
                 } else {
-                    break;
+                    return moves;
                 }
             }
         }
